@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background-color:rgba(135,206,235,1);
+}
+
+.header {
+  margin-top: 50px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container {
+  color: rgb(255,255,255);
+  border-radius: 4px;
+}
+
+.result {
+  margin-top: 20px;
+}
