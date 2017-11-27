@@ -45,7 +45,7 @@ function printResult(resultHash) {
     previousText += `${curr[0]}: ${displayedValue}`;
     previousText += '<br>';
     return previousText;
-  }, '');
+  }, '<p>Top 10 Keywords and their tf-idf</p>');
   document.getElementById('result-box').innerHTML = renderedText;
 }
 

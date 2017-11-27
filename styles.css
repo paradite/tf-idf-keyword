@@ -19,3 +19,7 @@ body {
 .result {
   margin-top: 20px;
 }
+
+a, a:hover {
+  color: white;
+}
