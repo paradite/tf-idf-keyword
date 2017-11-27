@@ -23,3 +23,7 @@ body {
 a, a:hover {
   color: white;
 }
+
+.bottom {
+  margin-top: 20px;
+}
