@@ -52,3 +52,65 @@ Keyword: "ai coding"
   Reddit Comments (/r/ChatGPTCoding/): What I learned using GPT to extract opinions from Reddit (to find the best portabl...
 Yeah I leaned on AI a lot to help me build this. ChatGPT in some cases. But mostly Replit's AI coding assistant since I use Replit as my IDE and hosting, and its easier to feed it context of your code files. AI just makes learning to code a lot easier and fun. I did try learning to code pre-chatgpt but I tended to lose patience because most courses start with boring examples I didn't care about.
 `);
+
+docs.push(`
+Is it just me or is GPT-4o an absolute beast when it comes to coding?
+
+I am totally in love with this thing.
+
+I used it to generate 200 lines of functionality code for a game state validation tool in addition to another 200 lines of corresponding unit tests (C#). The functionality is based on an existing class which is 700 lines long before adding the changes.
+
+I was mind blown because I could copy paste the code and it works from the first run without any compile errors. Not to mention that it's incredibly fast. TWO HUNDRED LINES. HOLY SHIT. I just did two days work in two damn hours!
+
+This feels like programming on steroids and it's totally in a different league.
+
+I'm using it through the API with my own API key (model name: gpt-4o-2024-05-13) with Cursor. I'm curious to hear the experiences of my fellow programmers.
+
+These days, I'm working on text processing pipelines in n8n and I use LLMs to build a library of JavaScript functions. These models have little understanding of n8n's node-based data structure, so I prepend my context with a 3kb brief that I had turbo write for itself after an exchange that aged me considerably. Since then, it's been smooth sailing.
+
+Here's what I find myself doing lately: if there is no joy after three or so shots using 4o, I continue the context on l3, which is cheap, fast, and reasonably competent. Bonusedly, I can verbally abuse the model for another one's fault throughout long contexts without triggering the harassment filter in OpenRouter. L3 periodically reassesses the problem and proactively suggests new routes which GPT may or may not do (I'm not sure because I don't read its rants just copy paste the code :)
+
+I might automate the 4o part by generating 3-5 shots and ordering them by cumulative BLEU score, as per a recent paper. I'm already using this method in a few pipelines, and it might work for code as well.
+
+Not sure why this is such a controversial take, I agree it's great and I really enjoy coding with it.
+
+Yet, the most upvoted posts are the ones complaining about how dumb chatgpt is. Funny thing is, the same posts happen on the Anthropic page.
+
+In the rare cases when details are provided, I usually find that it's a "skill issue" i.e. coding knowledge is close to zero OR they don't take the time to prompt properly (not separating problems for example).
+
+I get it, it's now possible to code without knowing how to code, and that's fantastic. But let's not shit on the tool that allows us to do what wasn't possible only a short while ago.
+
+I read someone who literally said that Openai technology has gone back to 3 years ago... I mean, try coding anything with what was avaliable then, good luck.
+
+For others struggling : Take one problem at the time. Provide documentation when relevant. Separate your code and functions into smaller chunks instead of feeding huge files. Even provide stack overflow answer that seem relevant if you're really stuck. You'll have a much better experience coding.
+
+Edit : apologies if it wasn't clear, I'm not saying it's perfect for everyone, there are loads of limitations still. For senior devs, the value is more about saving time for boilerplate code with something like Copilot. Still, the progress is there, my critic was more geared towards the "it's just crap now" crowd.
+`);
+
+docs.push(`
+Coding for 6.5 days now. Know how to do something, as for syntax I just know the vibe, I couldn’t write the code (Python).
+
+I’ve written a summary of what the project goals are (medical education app with a million-word source document).
+
+I give that to AI and tell it what I want to do. Originally I’d just give it all the code as I didn’t understand Python well enough or, tbh, how to edit code. Was using notepad++ as my only editor which messes up formatting, and if you don’t know the formatting…btw, who decided that indentation was such a big deal? :)
+
+Now the code base is 1300 lines I usually just give it the function I’m working on and tell it what I’m trying to achieve.
+
+If chat-got4o fails I use claude opus.
+
+The data is all stored separately as a json and that’s a few thousand lines long. I use the AI to convert the source word docs, including custom formatting tags.
+
+Program is fully functional as of now, even though I’m still very hazy on how Python works.
+
+It will present clinical cases with x-rays, ECGs etc. it has suggested answers, the user can give their answer to questions and get personalised feedback from 8 different AI “doctors”, they can ask questions in the context of the case or just ask random questions of Dr House, Dr Grey or whoever I’ve added.
+
+The AI docs can be asked to interpret ECgs and CxRs etc which is actually fascinating.
+
+Now that everything is working, I’m just progressively adding features, like the ability to zoom and drag the radiology images, or better text parsing.
+
+I’m still at the level where I’ll often have to ask the AI “uh…which function parses the text from the json?” Whereas a few days back it was “what’s a json?” And “can you make python code into a stand-alone program?”, lol.
+
+AI is amazing, and this project allows me to use AI to build a project to use the newest AI features that are out there. For things like Azure TTS or Vision where it might be too new for the AI to know how to do it, I just give it sample code from OpenAI or Microsoft and tell it nicely to make it work in my app.
+
+Now I just have the other 97% of the source data to add, and I’m done!
+`);
