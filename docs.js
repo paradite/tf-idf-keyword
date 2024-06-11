@@ -27,3 +27,28 @@ docs.push(`Artificial intelligence (AI), in its broadest sense, is intelligence 
 
 // https://en.wikipedia.org/wiki/ChatGPT
 docs.push(`ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30, 2022. Based on large language models (LLMs), it enables users to refine and steer a conversation towards a desired length, format, style, level of detail, and language. Successive user prompts and replies are considered at each conversation stage as context. ChatGPT is credited with starting the AI boom, which has led to ongoing rapid investment in and public attention to the field of artificial intelligence. By January 2023, it had become what was then the fastest-growing consumer software application in history, gaining over 100 million users and contributing to the growth of OpenAI's current valuation of $86 billion. ChatGPT's release spurred the release of competing products, including Gemini, Claude, Llama, Ernie, and Grok. Microsoft launched Copilot, based on OpenAI's GPT-4. In June 2024, a partnership between Apple Inc. and OpenAI was announced in which ChatGPT is integrated into the Apple Intelligence feature of Apple operating systems. Some observers raised concern about the potential of ChatGPT and similar programs to displace or atrophy human intelligence, enable plagiarism, or fuel misinformation. ChatGPT is built on OpenAI's proprietary series of generative pre-trained transformer (GPT) models and is fine-tuned for conversational applications using a combination of supervised learning and reinforcement learning from human feedback. ChatGPT was released as a freely available research preview, but due to its popularity, OpenAI now operates the service on a freemium model. Users on its free tier can access GPT-4o and GPT-3.5. The ChatGPT subscriptions "Plus", "Team" and "Enterprise" provide additional features such as DALL-E 3 image generation and increased GPT-4o usage limit.`);
+
+// reddit comments
+docs.push(`
+Keyword: "opus"
+Reddit Posts (/r/ChatGPTCoding/): Has anyone tried to use GPT4 and Claude 3 opus together for working?
+Keyword was found in submission title.
+`);
+
+docs.push(`
+Keyword: "ai coding"
+  Reddit Comments (/r/jobs/): I've been a software engineer for the past 9 years. Laid off 8 months ago. I just ...
+the why it won't replace anybody yet. Coding is like 10% or less of a typical software developer job. Half the job is meetings, then a lot of other work in organizing the work and understanding the requirements with how it should be implemented and tested. Then a lot of what I've seen of AI coding examples, it's simple applications that is like a school assignment, and looks like the code you would want generated would have to be very straightforward to explain.
+`);
+
+docs.push(`
+Keyword: "ai coding"
+  Reddit Posts (/r/webdev/): Seeking advice on starting my website and SaaS projects
+I believe some of them can even be done with WordPress. Of course, the SaaS projects will be more complex.  I'm not sure where to start. I'm familiar with Python and have worked on data science projects, but I've never deployed anything on the web. I'm considering using AI coding assistants and would appreciate some guidance to kickstart the implementation of my ideas.
+`);
+
+docs.push(`
+Keyword: "ai coding"
+  Reddit Comments (/r/ChatGPTCoding/): What I learned using GPT to extract opinions from Reddit (to find the best portabl...
+Yeah I leaned on AI a lot to help me build this. ChatGPT in some cases. But mostly Replit's AI coding assistant since I use Replit as my IDE and hosting, and its easier to feed it context of your code files. AI just makes learning to code a lot easier and fun. I did try learning to code pre-chatgpt but I tended to lose patience because most courses start with boring examples I didn't care about.
+`);
