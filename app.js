@@ -42,7 +42,7 @@ function idf(word) {
 function printResult(resultHash) {
   const resultArr = Object.keys(resultHash).map((key) => [key, resultHash[key]]);
   resultArr.sort((a, b) => { return b[1] - a[1]; });
-  const renderedText = resultArr.slice(0, 10).reduce((previousText, curr) => {
+  const renderedText = resultArr.slice(0, 20).reduce((previousText, curr) => {
     const displayedValue = Math.round(curr[1] * 1000) / 1000;
     previousText += `${curr[0]}: ${displayedValue}`;
     previousText += '<br>';
