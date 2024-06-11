@@ -57,6 +57,7 @@ function padText(text, length) {
 const topN = 40;
 const stopwords = new Set([
   '16x', 'found', 'posts', 'submission', 'rchatgpt', 'rchatgptcoding', 'like',
+  'title', 'url', 'r', 'im', 'ive',
   'coding', 'ai', 'code', 'chatgpt', 'reddit', 'prompt', 'keyword', 'comments',
   'i', 'you', 'vs', 'any', 'me', 'my', 'can', 'use',
   'this', 'there', 'but', 'all',
