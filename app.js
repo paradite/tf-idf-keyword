@@ -1,7 +1,10 @@
 function inputHandler() {
   const tfHash = processText(this.value.trim());
   const idfHash = Object.keys(tfHash).reduce(function(idfHash, curr) {
-    idfHash[curr] = idf(curr) * tfHash[curr];
+    idfHash[curr] = [
+      idf(curr) * tfHash[curr], 
+      `${formatNumber(tfHash[curr])} / ${formatNumber(idf(curr))} / ${formatNumber(idf(curr) * tfHash[curr])}`
+    ];
     return idfHash;
   }, {});
   printResult(idfHash);
@@ -39,15 +42,38 @@ function idf(word) {
   return Math.log10(1 + tokenizedDocs.length / (1 + df));
 }
 
+function formatNumber(number) {
+  // pad to 4 decimal places
+  // return Math.round(number * 1000) / 1000;
+  return number.toFixed(4);
+}
+
+function padText(text, length) {
+  length = Math.max(length, text.length);
+  // encode html entities
+  return '&nbsp;'.repeat(length - text.length) + text;
+}
+
+const topN = 40;
+const stopwords = new Set([
+  'coding', 'ai', 'code', 'chatgpt', 'reddit', 'prompt', 'keyword', 'comments',
+  'i', 'you', 'vs', 'any', 'me', 'my', 'can', 'use',
+  'this', 'there', 'but', 'all',
+  'i','me','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves','he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves','what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has','had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by','for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down','in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t','can','will','just','don','should','now',
+  'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will', 'with'
+]);
+
 function printResult(resultHash) {
-  const resultArr = Object.keys(resultHash).map((key) => [key, resultHash[key]]);
+  let resultArr = Object.keys(resultHash).map((key) => [key, resultHash[key][0], resultHash[key][1]]);
   resultArr.sort((a, b) => { return b[1] - a[1]; });
-  const renderedText = resultArr.slice(0, 20).reduce((previousText, curr) => {
-    const displayedValue = Math.round(curr[1] * 1000) / 1000;
-    previousText += `${curr[0]}: ${displayedValue}`;
+  // filter out stopwords
+  resultArr = resultArr.filter((curr) => !stopwords.has(curr[0]));
+  const renderedText = resultArr.slice(0, topN).reduce((previousText, curr) => {
+    const displayedValue = curr[2];
+    previousText += `${padText(curr[0], 15)}: ${displayedValue}`;
     previousText += '<br>';
     return previousText;
-  }, '<p>Top 10 keywords and their tf-idf</p>');
+  }, `<p>Top ${topN} keywords and their tf / idf / tf-idf</p>`);
   document.getElementById('result-box').innerHTML = renderedText;
 }
 

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color:rgba(135,206,235,1);
+  background-color:rgb(106, 196, 232);
 }
 
 .header {
@@ -26,4 +26,11 @@ a, a:hover {
 
 .bottom {
   margin-top: 20px;
+}
+
+#result-box {
+  text-align: left;
+  margin: 0 auto;
+  width: 500px;
+  font-family: monospace;
 }
